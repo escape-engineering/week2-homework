@@ -99,7 +99,7 @@ const List = () => {
       <TodoTitle>🔥오늘 할 일🔥</TodoTitle>
       <TodoWrap>
         {todos
-          .filter((todo) => todo.isDone === false)
+          .filter((todo) => !todo.isDone)
           .map((todo) => {
             return (
               <TodoComponent key={todo.id}>
@@ -127,7 +127,7 @@ const List = () => {
       <TodoTitle>⭕완료!⭕</TodoTitle>
       <TodoWrap>
         {todos
-          .filter((todo) => todo.isDone === true)
+          .filter((todo) => todo.isDone)
           .map((todo) => {
             return (
               <TodoComponent key={todo.id}>

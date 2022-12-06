@@ -56,7 +56,7 @@ const Todo = () => {
             <div>id : {targetTodo.id}</div>
             <BackBtn
               onClick={() => {
-                navigate('/');
+                navigate(-1);
               }}
             >
               이전으로

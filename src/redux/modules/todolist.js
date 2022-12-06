@@ -47,15 +47,21 @@ const todolist = (state = initialState, action) => {
     case DELETE_TODO:
       return state.filter((todo) => todo.id !== action.id);
     case CHANGE_TODO:
-      let findIndex = state.findIndex((todo) => todo.id === action.id);
+      //map
       let copyState = [...state];
-      if (copyState[findIndex].isDone === false) {
-        copyState[findIndex] = { ...copyState[findIndex], isDone: true };
-        return copyState;
-      } else {
-        copyState[findIndex] = { ...copyState[findIndex], isDone: false };
-        return copyState;
-      }
+      return copyState.map((todo) =>
+        todo.id === action.id ? { ...todo, isDone: !todo.isDone } : todo
+      );
+    //findindex
+    // let findIndex = state.findIndex((todo) => todo.id === action.id);
+    // let copyState = [...state];
+    // if (copyState[findIndex].isDone === false) {
+    //   copyState[findIndex] = { ...copyState[findIndex], isDone: true };
+    //   return copyState;
+    // } else {
+    //   copyState[findIndex] = { ...copyState[findIndex], isDone: false };
+    //   return copyState;
+    // }
     default:
       return state;
   }

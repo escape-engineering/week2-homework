@@ -13,8 +13,8 @@ const FullLayout = styled.div`
 const TodoList = () => {
   return (
     <FullLayout>
-      <Form />
       <Header />
+      <Form />
       <List />
     </FullLayout>
   );
