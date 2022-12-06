@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 주특기 숙련주차 스타일드컴포넌트, 리덕스, 리액트 라우터 돔
 
 ## Available Scripts
 
