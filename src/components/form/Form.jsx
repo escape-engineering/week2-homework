@@ -43,7 +43,7 @@ const SubmitButton = styled.button`
     background-color: #b7f8d1;
   }
 `;
-const Header = () => {
+const Form = () => {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const todos = useSelector((state) => state.todolist);
@@ -86,4 +86,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Form;

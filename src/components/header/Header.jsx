@@ -15,7 +15,7 @@ const CoverTitles = styled.div`
   margin-left: 10px;
   margin-right: 10px;
 `;
-const Form = () => {
+const Header = () => {
   return (
     <div>
       <Cover>
@@ -28,4 +28,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Header;
