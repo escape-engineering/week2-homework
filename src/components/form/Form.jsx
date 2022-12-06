@@ -1,17 +1,15 @@
 import React from 'react';
-import Header from '../header/Header';
 import styled from 'styled-components';
 
 const Cover = styled.div`
-  width: 1500px;
   height: 50px;
-  margin: 0 auto;
-  background-color: grey;
+  background-color: #99ffc3;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
   font-size: 20px;
+  border-radius: 10px;
 `;
 const CoverTitles = styled.div`
   margin-left: 10px;
@@ -26,7 +24,6 @@ const Form = () => {
         <CoverTitles>Styled-Component</CoverTitles>
         <CoverTitles>React-Router-Dom</CoverTitles>
       </Cover>
-      <Header />
     </div>
   );
 };

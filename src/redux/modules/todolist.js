@@ -11,30 +11,30 @@ export const addTodo = (payload) => {
     payload,
   };
 };
-export const deleteTodo = (payload) => {
+export const deleteTodo = (id) => {
   return {
     type: DELETE_TODO,
-    payload,
+    id,
   };
 };
-export const changeTodo = (payload) => {
+export const changeTodo = (id) => {
   return {
     type: CHANGE_TODO,
-    payload,
+    id,
   };
 };
 // Initial State
 const initialState = [
   {
     id: 0,
-    title: '리액트 리덕스 너무어려워',
-    desc: '리액트 라우터 돔 어려워',
+    title: '리덕스 공부',
+    desc: '리덕스 이해하기',
     isDone: false,
   },
   {
     id: 1,
-    title: '리액트 너무어려워',
-    desc: '리액트 어려워',
+    title: '숨쉬기',
+    desc: '호흡을 해봅시다.',
     isDone: true,
   },
 ];
@@ -44,10 +44,18 @@ const todolist = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
       return [...state, action.payload];
-    // case DELETE_TODO:
-    //   return [];
-    // case CHANGE_TODO:
-    //   return [];
+    case DELETE_TODO:
+      return state.filter((todo) => todo.id !== action.id);
+    case CHANGE_TODO:
+      let findIndex = state.findIndex((todo) => todo.id === action.id);
+      let copyState = [...state];
+      if (copyState[findIndex].isDone === false) {
+        copyState[findIndex] = { ...copyState[findIndex], isDone: true };
+        return copyState;
+      } else {
+        copyState[findIndex] = { ...copyState[findIndex], isDone: false };
+        return copyState;
+      }
     default:
       return state;
   }
