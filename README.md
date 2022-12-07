@@ -1,4 +1,4 @@
-# 주특기 숙련주차 스타일드컴포넌트, 리덕스, 리액트 라우터 돔
+# 숙련주차 스타일드컴포넌트, 리덕스, 리액트 라우터 돔
 
 ## 1)실행 화면 및 주소
 
@@ -8,7 +8,7 @@
 
 https://week2-homework.vercel.app/
 
-## 2) 사용기술
+## 2) 사용 라이브러리
     React, StyledComponent, Redux, React-Router-Dom
 
 ## 3) trouble shooting
